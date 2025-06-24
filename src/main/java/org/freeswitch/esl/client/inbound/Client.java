@@ -66,6 +66,13 @@ public class Client implements IModEslApi {
 		}
 	}
 
+	/**
+	 * remove all eslEventlistener
+	 */
+	public void removeAllEventListener() {
+		eventListeners.clear();
+	}
+
 	@Override
 	public boolean canSend() {
 		return clientContext.isPresent()
