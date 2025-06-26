@@ -320,6 +320,10 @@ public class Client implements IModEslApi {
 
 	}
 
+	public void forceClose() {
+        this.clientContext.ifPresent(context -> ((Context) context).closeChannel());
+	}
+
 	/*
 		*  Internal observer of the ESL protocol
 		*/
